@@ -1,0 +1,33 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/td"
+    ],
+    "@type": [
+        "tm:ThingModel"
+    ],
+    "title": "LongAction",
+    "actions": {
+        "cancel": {
+            "title": "Cancel",
+            "description": "Cancel action execution"
+        }
+    },
+    "properties": {
+        "status":{
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "enum": ["pending","running","cancelled","completed"]
+                },
+                "id":{
+                    "type": "string"
+                }
+            },
+            "required": ["status","id"],
+            "title": "status",
+            "description": "Action status"
+        }
+    },
+    "events": {}
+}

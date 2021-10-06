@@ -1,0 +1,21 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1"
+    ],
+    "@type": [
+        "tm:ThingModel"
+    ],
+    "title": "TestingActions",
+    "actions": {
+        "longRunning":{
+            "title": "long",
+            "description": "",
+            "input": {},
+            "output": {
+                "model": {
+                    "href":"http://localhost:8888/model.tm.json"
+                }
+            }
+        }   
+    }
+}

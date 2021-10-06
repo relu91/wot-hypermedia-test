@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/td"
+    ],
+    "@type": [
+        "tm:ThingModel"
+    ],
+    "title": "LongAction",
+    "actions": {
+        "cancel": {
+            "title": "Cancel",
+            "description": "Cancel action execution",
+            "forms": [
+                {
+                    "href": "http://localhost:3000/actions/{{ID}}/cancel"
+                }
+            ]
+        }
+    },
+    "properties": {
+        "status": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "pending",
+                        "running",
+                        "cancelled",
+                        "completed"
+                    ]
+                },
+                "id": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "status",
+                "id"
+            ],
+            "title": "status",
+            "description": "Action status",
+            "forms": [
+                {
+                    "href": "http://localhost:3000/actions/{{ID}}/status"
+                }
+            ]
+        }
+    },
+    "events": {}
+}

@@ -1,0 +1,39 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1"
+    ],
+    "@type": [
+        "tm:ThingModel"
+    ],
+    "title": "TestingActions",
+    "actions": {
+        "longRunning": {
+            "title": "long",
+            "description": "",
+            "input": {},
+            "output": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "pending",
+                            "running",
+                            "cancelled",
+                            "completed"
+                        ]
+                    },
+                    "id": {
+                        "type": "string"
+                    }
+                },
+                "model": {
+                    "href":"http://localhost:3000/model-brown.tm.json",
+                    "mappings": {
+                        "/id" : "ID"
+                    }
+                }
+            }
+        }
+    }
+}
